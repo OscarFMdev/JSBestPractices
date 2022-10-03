@@ -11,14 +11,19 @@ import { store, taskArray } from './modules/store.js';
 // import { restoreIcons } from './modules/icons';
 
 /* Add and remove */
+const trashCans = document.querySelectorAll('.delete-icon');
+const addBtn = document.querySelector('.fa-right-from-bracket');
+const deleteCompleted = document.querySelector('.completed-text');
+const allCheckBoxes = document.querySelectorAll('input[type=checkbox]');
+const taskTexts = document.querySelectorAll('p');
+const deleteAll = document.querySelector('.reload-icon');
+
 window.addEventListener('DOMContentLoaded', () => {
-  const addBtn = document.querySelector('.fa-right-from-bracket');
   addBtn.addEventListener('click', (e) => {
     window.location.reload();
     addTask(e);
   });
 
-  const trashCans = document.querySelectorAll('.delete-icon');
   for (let i = 0; i < trashCans.length; i += 1) {
     trashCans[i].addEventListener('click', (e) => {
       window.location.reload();
@@ -27,15 +32,11 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const taskTexts = document.querySelectorAll('p');
   for (let i = 0; i < taskTexts.length; i += 1) {
     taskTexts[i].addEventListener('click', (e) => {
       edit(e);
     });
   }
-
-  const deleteCompleted = document.querySelector('.completed-text');
-  const allCheckBoxes = document.querySelectorAll('input[type=checkbox]');
 
   function clearCompleted(elem) {
     return elem.completed !== true;
@@ -54,7 +55,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-const deleteAll = document.querySelector('.reload-icon');
 deleteAll.addEventListener('click', () => {
   taskArray.splice(0, taskArray.length);
   store();
