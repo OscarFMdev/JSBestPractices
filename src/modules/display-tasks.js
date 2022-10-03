@@ -1,6 +1,6 @@
 /* Display tasks */
 
-import { store, taskArray } from './store.js';
+import { store, taskArray } from './store';
 
 const displayTasks = () => {
   const tasksContainer = document.querySelector('.tasks-container');
