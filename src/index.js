@@ -1,14 +1,13 @@
 import './style.css';
 /* index.js */
-import displayTasks from './modules/display-tasks.js';
+import displayTasks from './modules/display-tasks';
 import {
   addTask,
   checkBoxesStatus,
   deleteTask,
   edit,
-} from './modules/functions.js';
-import { store, taskArray } from './modules/store.js';
-// import { restoreIcons } from './modules/icons';
+} from './modules/functions';
+import { store, taskArray } from './modules/store';
 
 /* Add and remove */
 const trashCans = document.querySelectorAll('.delete-icon');

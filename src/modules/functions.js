@@ -1,6 +1,6 @@
-import displayTasks from './display-tasks.js';
-import addObjToLocalStorage from './objectToLS.js';
-import { store, taskArray } from './store.js';
+import displayTasks from './display-tasks';
+import addObjToLocalStorage from './objectToLS';
+import { store, taskArray } from './store';
 
 const submit = document.querySelector('.fa-right-from-bracket');
 const tasksContainer = document.querySelector('.tasks-container');

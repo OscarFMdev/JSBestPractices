@@ -1,4 +1,4 @@
-import { store, taskArray } from './store.js';
+import { store, taskArray } from './store';
 
 const addObjToLocalStorage = (value) => {
   const object = {
